@@ -50,9 +50,9 @@ class Shrine
         begin
           metadata = google_api_client.get_file(
             get_drive_file_id(id),
-            fields: 'webViewLink'
+            fields: 'webContentLink'
           )
-          metadata.web_view_link
+          metadata.web_content_link
         rescue Exception => e
           # p "URL ERR! #{e}"
           #TODO: something meaningful?
